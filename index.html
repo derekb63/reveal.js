@@ -65,9 +65,11 @@
 					</section>
 					<section>
 						<h2>Black body control</h2>
-						<p>Changes settings of the blackbody</p>
-						<p> Reads current temperature</p> 
-						<p>Automated cooldown</p>
+						<ul>
+						<li>Changes settings of the blackbody</li>
+						<li> Reads current temperature</li> 
+						<li>Automated cooldown</li>
+						</ul>
 						<br>
 						<a href="#/2">
 						</a>
@@ -75,29 +77,58 @@
 				</section>
 				<section>
 					<h2> Command line inputs </h2>
-					<p> Insert information about how the test file will look</p>
+					<pre><code># Camera Settings
+camera_name: SC6700
+integration_time: 1e-4
+frame_width: 512
+frame_height: 512
+x_offset: 56
+y_offset: 24
+
+# Temperature profile
+termperatures:
+	- 100
+	- 200
+	- 400
+					</code></pre>
 				</section>
 				<section>
 					<h2> Current progress</h2>
-					<ol>
+					<ul>
 						<li> Blackbody control </li>
 						<li> .sfmov converter</li>
 						<li> Image tools</li>
-					</ol>
+					</ul>
 				</section>
 				<section>
 					<h2> Short term goals</h2>
-					<ol>
+					<ul>
 						<li> Camera control </li>
 						<li> Main control</li>
 						<li> Finalize test suite</li>
-					</ol>
+						<li> Command line inputs </li>
+					</ul>
 				</section>
 				<section>
 					<h2> Long term goals </h2>
+					<ul>
+						<li> Automatic Non Uniformity Correction (NUC) </li>
+						<li> Integrate RADCAL </li>
+						<li> Speed up.sfmov converter</li>
+						<li> Automatic ROI detection </li>
+						<li> Dead pixel correction </li>
+					</ul>
 				</section>
 				<section>
 					<h2> Dependencies</h2>
+					<ul>
+						<li>numpy </li>
+						<li>pytest </li>
+						<li>h5py </li>
+						<li>pyserial </li>
+						<li>skimage </li>
+						<li>matplotlib </li>
+					</ul>
 				</section>
 			</div>	
 		</div>
@@ -106,15 +137,14 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-
 			Reveal.initialize({
-				dependencies: [
+			dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
-			});
+					});
 		</script>
 	</body>
 </html>
