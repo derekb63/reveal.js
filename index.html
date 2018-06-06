@@ -27,56 +27,79 @@
 			<div class="slides">
 				<section>
 					<h2>Blackbody Calibration Automation</h2>
+								
 					<h3> Derek Bean </h3>
-					<h4> June 6 2016 </h4>
+					<h5> June 6 2016 </h5>
+					  <img src="images/lab_logos.jpg" width="40%" style="align: right|bottom" >
 				</section>
 				<section>
 					<h2> Calibrating an Infrared Camera</h2>
-			
 				</section>
 								<section>
 					<section>
 						<h2>Software Architecture</h2>
-					
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<img src="images/global_arc.png" width="100%" style="align: right|bottom" >
 						<br>
 						<a href="#" class="navigate-down"> </a>
 					</section>
 					<section>
-						<h2> Central control</h2>
-						<p> Interacts with other modules</p>
-						<p> Controls the flow and decisions</p>
+						<h2>Control Code</h2>
+					<img src="images/control.png" width="100%" style="align: center">
 					</section>
 					<section>
-						<h2>Image analysis</h2>
-						<p>Handles manipulation of the images</p>
-						<p>ROI determination</p>
+						<h2>Image Analysis</h2>
+						<div id="left">
+							<ul>
+							<li> Loads files </li>
+							<li> Image viewing </li>
+							<li> ROI determination </li>
+							<li> Background subraction</li>
+							<li> Uniformity </li>
+							</ul>
+						</div>
+						<div id="right">
+						<img src="images/blackbody_view.jpg" style="align: left">
+						</div>
 						<br>
 						<a href="#/2">
 						</a>
 					</section>
 					<section>
-						<h2>Camera control</h2>
-						<p>Adjust the camera settings</p>
-						<p>Capture frames</p>
+						<h2>Camera Control</h2>
+						<div id="left">
+							<ul>
+							<li> Change settings </li>
+							<li> Select filter </li>
+							<li> Capture images </li>
+							</ul>
+						</div>
+						<div id="right">
+						<img src="images/SC6700.jpg" style="align: left">
+						</div>
 						<br>
 						<a href="#/2">
 						</a>
 					</section>
 					<section>
-						<h2>Black body control</h2>
-						<ul>
-						<li>Changes settings of the blackbody</li>
-						<li> Reads current temperature</li> 
-						<li>Automated cooldown</li>
-						</ul>
+						<h2>Black Body Control</h2>
+
+						<div id="left">
+							<ul>
+							<li> Changes settings of the blackbody </li>
+							<li> Reads current temperature </li>
+							<li> Automatic cooldown </li>
+							</ul>
+						</div>
+						<div id="right">
+						<img src="images/blackbody.png" style="align: left">
+						</div>
 						<br>
 						<a href="#/2">
 						</a>
 					</section>
 				</section>
 				<section>
-					<h2> Command line inputs </h2>
+					<h2> Command Line Inputs </h2>
 					<pre><code># Camera Settings
 camera_name: SC6700
 integration_time: 1e-4
